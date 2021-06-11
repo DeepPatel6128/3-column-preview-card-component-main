@@ -1,0 +1,119 @@
+:root{
+    --sedan-background: hsl(31, 77%, 52%);
+    --suv-background:hsl(184, 100%, 22%);
+    --luxury-background:hsl(179, 100%, 13%);
+    --background-color:hsl(0, 0%, 95%);
+    --text-color: hsla(0, 0%, 100%, 0.75);
+}
+    /* font-family:'Lexend Deca', sans-serif; */
+    /* font-family: 'Big Shoulders Display', cursive; */
+*, ::after , *::before{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+}
+.container{
+    width: 85%;
+    height:auto;
+    max-width: 1200px;
+    margin:auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--background-color);
+}
+.para , .btn{
+    font-family:'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+.para{
+    color: var(--text-color);
+    line-height: 1.5;
+}
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.car{
+    width: 65%;
+    padding: 30px 30px;
+}
+
+/* Sedan */
+.sedan{
+    background-color: var(--sedan-background);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 0;
+}
+.sedan-btn{
+    color: var(--sedan-background);
+}
+/* Suv */
+.suv{
+    background-color: var(--suv-background);
+}
+.suv-btn{
+    color: var(--suv-background);
+}
+/* Luxury */
+.luxury{
+    background-color: var(--luxury-background);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.luxury-btn{
+    color: var(--luxury-background);
+}
+
+@media(min-width:1100px){
+    .container{
+        width: 60%;
+        height:90vh;
+        flex-direction: row;
+    }
+    .car{
+        height: 80%;
+        width: 50%;
+        padding: 40px;
+        position: relative;
+    }
+    .sedan{
+        border-bottom-left-radius:8px;
+        border-top-right-radius: 0;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    .para, .btn{
+        font-size: 17px;
+    }
+    .btn{
+        position: absolute;
+        bottom: 10%;
+        padding: 15px 25px;
+        border-radius: 25px;
+    }
+    .luxury{
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+}
